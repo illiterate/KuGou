@@ -1,0 +1,29 @@
+1.urllib.parse.quote()
+
+  屏蔽特殊的字符、比如如果url里面的空格！url里面是不允许出现空格的。
+ 
+  在 Python2.x 中的用法是：
+  urllib.quote(text)
+  Python3.x 中是
+  urllib.parse.quote(text)
+  按照标准， URL 只允许一部分 ASCII 字符（数字字母和部分符号），其他的字符（如汉字）是不符合 URL 标准的。
+  所以 URL 中使用其他字符就需要进行 URL 编码。
+  URL 中传参数的部分（query String），格式是：
+  name1=value1&name2=value2&name3=value3 
+  假如你的 name 或者 value 值中有『&』或者『=』等符号，就当然会有问题。所以URL中的参数字符串也需要把『&=』等符号进行编码。
+  URL编码的方式是把需要编码的字符转化为 %xx 的形式。通常 URL 编码是基于 UTF-8 的（当然这和浏览器平台有关）。
+  
+  例子：
+  比如『我』，unicode 为 0x6211,  UTF-8 编码为 0xE6 0x88 0x91，URL 编码就是 %E6%88%91
+  在 JavaScript 中，提供了 encodeURI 和 encodeURIComponent 两种方法对 URL 进行编码；
+  Python 的 urllib 库中提供了 quote 和 quote_plus 两种方法。
+  因为是针对不同场景设计，以上四种方法编码的范围均不相同，比如 quote 除了 -._/09AZaz ,都会进行编码。quote_plus 比 quote 『更进』一些，它还会编码 
+
+//来自百度知道
+
+
+2.酷狗搜索的网页带有时间戳
+
+
+3.urllib.request.urlretrieve(url,path)
+  把音乐或者图片格式的网页保存在path路径里面

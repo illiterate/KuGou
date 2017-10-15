@@ -23,7 +23,7 @@ def getFileNameAndHash(keyword_cn):
     namelist = []
     hashlist = []
     for i in html['data']['lists']:
-      i['FileName'] = i['FileName'].replace('<em>', '')
+        i['FileName'] = i['FileName'].replace('<em>', '')
     	i['FileName'] = i['FileName'].replace('</em>', '')
     	print(str(html['data']['lists'].index(i)) + '. ' + i['FileName'])
     	namelist.append(i['FileName'])

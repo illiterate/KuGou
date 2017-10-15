@@ -1,6 +1,10 @@
 # KuGou
 A small downloader for KuGou 本程序只应用于学习交流，不要应用于商业目的、侵犯其他公司利益
 
+Version : 0.1  默认下载
+
+Version : 0.2  选择下载
+
 ## Step 1：获取搜索结果的url
   
   1.在博客（[博客原文](http://www.cnblogs.com/tangwanzun/p/6582039.html)）中了解了酷狗搜索结果的url结构
